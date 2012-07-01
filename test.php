@@ -28,6 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if ($badge>0) {
 		$apns->addMessageBadge($badge);
 	}
+	$sound = $_POST['sound'];
+	if (!empty($sound)) {
+		$apns->addMessageSound($sound);
+	}
 	//$apns->addMessageCustom('acme2', array('bang', 'whiz'));
 	if ($_POST['chime']) {
 		$apns->addMessageSound($_POST['sound']);
