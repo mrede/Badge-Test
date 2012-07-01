@@ -88,7 +88,7 @@ class APNS {
 	* @var string
 	* @access private
 	*/
-	private $certificate = 'certs/cert.pem';
+	private $certificate = 'certs/development.pem';
 
 	/**
 	* Apples Production APNS Gateway
