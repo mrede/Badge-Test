@@ -39,7 +39,7 @@ if(!function_exists("__autoload")){
 }
 
 // CREATE DATABASE OBJECT ( MAKE SURE TO CHANGE LOGIN INFO )
-$db = new DbConnect('localhost', 'root', '', 'apn_test');
+$db = new DbConnect('localhost', 'badgetest', 'badgetestRANK', 'apn_test');
 $db->show_errors();
 
 // FETCH $_GET OR CRON ARGUMENTS TO AUTOMATE TASKS
