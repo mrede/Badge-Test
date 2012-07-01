@@ -24,6 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	// APPLE APNS EXAMPLE 1
 	$apns->newMessage(intval($_POST['id']), date('Y-m-d h:i'));
 	$apns->addMessageAlert($_POST['message']);
+	$badge = intval($_POST['badge']);
+	if ($badge>0) {
+		$aps->addMessageBage($badge);
+	}
 	//$apns->addMessageCustom('acme2', array('bang', 'whiz'));
 	if ($_POST['chime']) {
 		$apns->addMessageSound($_POST['sound']);
