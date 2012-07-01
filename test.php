@@ -1,7 +1,7 @@
 <?php
-
-if ($_SERVER['REQUEST_METHOD'] == 'post') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	//Do some shit
+	print 'yup';
 	// AUTOLOAD CLASS OBJECTS... YOU CAN USE INCLUDES IF YOU PREFER
 	if(!function_exists("__autoload")){ 
 		function __autoload($class_name){
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'post') {
 	 */
 
 	// APPLE APNS EXAMPLE 1
-	$apns->newMessage($_POST['id']);
+	$apns->newMessage(intval($_POST['id']), date('Y-m-d h:i'));
 	$apns->addMessageAlert($_POST['message']);
 	//$apns->addMessageCustom('acme2', array('bang', 'whiz'));
 	if ($_POST['chime']) {
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'post') {
 ?>
 <html>
 <body>
-<form method='post'>
+<form method='post' action='/test.php'>
 	Message: <input type='text' name='message' value='' /><br />
 	Badge no: <input type='text' name='badge' value='' /><br />
 	Custom: <input type='text' name='custom' value='' /><br />
