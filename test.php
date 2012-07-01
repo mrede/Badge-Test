@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$apns->addMessageAlert($_POST['message']);
 	$badge = intval($_POST['badge']);
 	if ($badge>0) {
-		$aps->addMessageBadge($badge);
+		$apns->addMessageBadge($badge);
 	}
 	//$apns->addMessageCustom('acme2', array('bang', 'whiz'));
 	if ($_POST['chime']) {
