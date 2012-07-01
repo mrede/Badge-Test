@@ -39,14 +39,14 @@ if(!function_exists("__autoload")){
 }
 
 // CREATE DATABASE OBJECT ( MAKE SURE TO CHANGE LOGIN INFO IN CLASS FILE )
-$db = new DbConnect('localhost', 'root', '', 'apns_test');
+$db = new DbConnect('localhost', 'badgetest', 'badgetestRANK', 'badgetest');
 $db->show_errors();
 
 // FETCH $_GET OR CRON ARGUMENTS TO AUTOMATE TASKS
 $apns = new APNS($db);
 
 /**
-/*	ACTUAL SAMPLES USING THE 'Examples of JSON Payloads' EXAMPLES (1-5) FROM APPLE'S WEBSITE.
+ *	ACTUAL SAMPLES USING THE 'Examples of JSON Payloads' EXAMPLES (1-5) FROM APPLE'S WEBSITE.
  *	LINK:  http://developer.apple.com/iphone/library/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/ApplePushService/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW15
  */
 
