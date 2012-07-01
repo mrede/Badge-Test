@@ -112,7 +112,7 @@ class APNS {
 	* @var string
 	* @access private
 	*/
-	private $sandboxCertificate = 'certs/cert.pem'; // change this to your development certificate absolute path
+	private $sandboxCertificate = 'certs/development.pem'; // change this to your development certificate absolute path
 
 	/**
 	* Apples Sandbox APNS Gateway
@@ -497,7 +497,7 @@ class APNS {
 		$fp = false;
 
 		var_dump($this->sslStreams);
-		
+
 		if(isset($this->sslStreams[$development])) {
 			$fp = $this->sslStreams[$development];
 		}
