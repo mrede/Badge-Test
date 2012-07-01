@@ -495,6 +495,9 @@ class APNS {
 		if(strlen($development)==0) $this->_triggerError('Missing development status.', E_USER_ERROR);
 
 		$fp = false;
+
+		var_dump($this->sslStreams);
+		
 		if(isset($this->sslStreams[$development])) {
 			$fp = $this->sslStreams[$development];
 		}
