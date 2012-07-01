@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'post') {
 	Custom: <input type='text' name='custom' value='' /><br />
 	Sound: <br />
 		bingbong<input type='radio' name='sound' value='bingbong.aiff' /><br />
-		bingbong<input type='radio' name='sound' value='chime' /><br />
+		chime<input type='radio' name='sound' value='chime' /><br />
 	ID: <input type='text' name='id' value='' /><br />
+	<input type='submit' />
 </form>
