@@ -88,7 +88,7 @@ class APNS {
 	* @var string
 	* @access private
 	*/
-	private $certificate = 'cert.pem';
+	private $certificate = 'certs/cert.pem';
 
 	/**
 	* Apples Production APNS Gateway
@@ -112,7 +112,7 @@ class APNS {
 	* @var string
 	* @access private
 	*/
-	private $sandboxCertificate = 'cert.pem'; // change this to your development certificate absolute path
+	private $sandboxCertificate = 'certs/cert.pem'; // change this to your development certificate absolute path
 
 	/**
 	* Apples Sandbox APNS Gateway
